@@ -35,7 +35,7 @@
 | :--- | :--- | :--- |
 | **[ForgeDB](https://github.com/Aastha008/ForgeDB)** | Java 21, B+ Tree, WAL, ARIES, 2PL | Relational storage engine from scratch with 4KB slotted pages, LRU buffer pool, Volcano query engine, and real-time studio telemetry. |
 | **[DataPulse AI](https://datapulse-ai.streamlit.app)** | Python, DuckDB, LangGraph, FastAPI | Autonomous product intelligence platform with self-healing Text-to-SQL pipeline on 547K+ records and SciPy statistical testing. |
-| **[PulseCart](https://github.com/Aastha008)** | BigQuery, dbt, SQL, Power BI | Automated dbt pipeline modeling multi-stage funnel drop-offs and A/B test conversion evaluation on 100K+ sessions. |
+| **[FunnelScope](https://github.com/Aastha008/FunnelScope)** | BigQuery, dbt, SQL, Power BI | Automated dbt pipeline modeling multi-stage funnel drop-offs and A/B test conversion evaluation on 100K+ sessions. |
 | **[CreditLens](https://github.com/Aastha008/CreditRiskAnalysis)** | Python, Pandas, SQL, Power BI | Diagnostic risk modeling on 887K+ loan records uncovering 6.4x default rate spread across loan grades. |
 | **[DinePulse](https://zomato-restaurant-analysis.streamlit.app)** | Python, DuckDB, Streamlit | In-memory OLAP analytics dashboard on 50,000+ restaurant listings with sub-50ms query execution. |
 | **[Options Pricing Lab](https://github.com/Aastha008/Options-Pricing-Dashboard)** | Python, QuantLib, Streamlit, SciPy | Black-Scholes solver, Greeks engine, Monte Carlo GBM simulation, GARCH volatility modeling, and 95%/99% VaR/CVaR. |
