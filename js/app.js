@@ -1,50 +1,54 @@
 /* ==========================================================================
-   Aastha Gupta Portfolio - Clean & Natural UI Controller
+   Aastha Gupta - Portfolio Interactivity (Filters, Solvers & Mobile Menu)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
-    // 1. DYNAMIC TYPING EFFECT IN HERO SECTION
-    const typingElement = document.getElementById('typing-text');
-    const roles = [
-        "Data Engineering & Analytics",
-        "Quantitative Finance & Risk Modeling",
-        "Software Systems & REST APIs",
-        "Computer Science @ VIT Vellore"
-    ];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+    // 1. MOBILE MENU TOGGLE
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
-    function typeEffect() {
-        if (!typingElement) return;
-
-        const currentRole = roles[roleIndex];
-        if (isDeleting) {
-            typingElement.textContent = currentRole.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typingElement.textContent = currentRole.substring(0, charIndex + 1);
-            charIndex++;
-        }
-
-        let speed = isDeleting ? 30 : 70;
-
-        if (!isDeleting && charIndex === currentRole.length) {
-            speed = 2200; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            speed = 350;
-        }
-
-        setTimeout(typeEffect, speed);
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            const isVisible = navMenu.style.display === 'flex';
+            navMenu.style.display = isVisible ? 'none' : 'flex';
+            if (!isVisible) {
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '100%';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.background = '#0a0f1d';
+                navMenu.style.padding = '1.5rem';
+                navMenu.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+            }
+        });
     }
-    typeEffect();
 
-    // 2. BLACK-SCHOLES OPTION PRICING & ANALYTICAL GREEKS ENGINE FOR QUANT LAB
+    // 2. PROJECT CATEGORY FILTERING TABS
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filterValue === 'all' || category === filterValue) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // 3. INTERACTIVE BLACK-SCHOLES OPTION SOLVER
     function CND(x) {
         const a1 = 0.319381530;
         const a2 = -0.356563782;
@@ -62,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return (1.0 / Math.sqrt(2 * Math.PI)) * Math.exp(-0.5 * x * x);
     }
 
-    function calculateQuantLabBS() {
+    function calculateBS() {
         const S0 = parseFloat(document.getElementById('lab-spot')?.value || 100);
         const K = parseFloat(document.getElementById('lab-strike')?.value || 100);
         const r = parseFloat(document.getElementById('lab-rate')?.value || 5) / 100;
@@ -97,70 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ['lab-spot', 'lab-strike', 'lab-rate', 'lab-vol', 'lab-time'].forEach(id => {
         const input = document.getElementById(id);
         if (input) {
-            input.addEventListener('input', calculateQuantLabBS);
+            input.addEventListener('input', calculateBS);
         }
     });
-    calculateQuantLabBS();
 
-    // Initialize 3D Volatility surface canvas in Quant Lab
-    if (window.initLab3DVolSurface) {
-        setTimeout(window.initLab3DVolSurface, 300);
-    }
-
-    // 3. RESUME MODAL HANDLERS
-    const openResumeBtn = document.getElementById('open-resume-btn');
-    const resumeModal = document.getElementById('resume-modal');
-    const closeResumeModal = document.getElementById('close-resume-modal');
-
-    if (openResumeBtn && resumeModal) {
-        openResumeBtn.addEventListener('click', () => {
-            resumeModal.classList.remove('hidden');
-        });
-    }
-
-    if (closeResumeModal && resumeModal) {
-        closeResumeModal.addEventListener('click', () => {
-            resumeModal.classList.add('hidden');
-        });
-    }
-
-    if (resumeModal) {
-        resumeModal.addEventListener('click', (e) => {
-            if (e.target === resumeModal) {
-                resumeModal.classList.add('hidden');
-            }
-        });
-    }
-
-    // 4. MOBILE MENU TOGGLE
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileDrawer = document.getElementById('mobile-drawer');
-
-    if (mobileToggle && mobileDrawer) {
-        mobileToggle.addEventListener('click', () => {
-            mobileDrawer.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileDrawer.classList.remove('active');
-            });
-        });
-    }
-
-    // 5. CONTACT FORM SUBMISSION
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = contactForm.querySelector('button[type="submit"]');
-            btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            btn.style.background = '#10b981';
-            setTimeout(() => {
-                contactForm.reset();
-                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-                btn.style.background = '';
-            }, 3000);
-        });
-    }
+    calculateBS();
 });
