@@ -6,36 +6,37 @@ document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     // 1. MOBILE MENU TOGGLE
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
 
-    if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-            const isVisible = navMenu.style.display === 'flex';
-            navMenu.style.display = isVisible ? 'none' : 'flex';
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            const isVisible = mainNav.style.display === 'flex';
+            mainNav.style.display = isVisible ? 'none' : 'flex';
             if (!isVisible) {
-                navMenu.style.flexDirection = 'column';
-                navMenu.style.position = 'absolute';
-                navMenu.style.top = '100%';
-                navMenu.style.left = '0';
-                navMenu.style.width = '100%';
-                navMenu.style.background = '#0a0f1d';
-                navMenu.style.padding = '1.5rem';
-                navMenu.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+                mainNav.style.flexDirection = 'column';
+                mainNav.style.position = 'absolute';
+                mainNav.style.top = '100%';
+                mainNav.style.left = '0';
+                mainNav.style.width = '100%';
+                mainNav.style.background = '#ffffff';
+                mainNav.style.padding = '1.5rem';
+                mainNav.style.borderBottom = '1px solid #e2e8f0';
+                mainNav.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)';
             }
         });
     }
 
     // 2. PROJECT CATEGORY FILTERING TABS
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const projectCards = document.querySelectorAll('.project-case-card');
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+    filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            filterPills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
 
-            const filterValue = btn.getAttribute('data-filter');
+            const filterValue = pill.getAttribute('data-filter');
 
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. INTERACTIVE BLACK-SCHOLES OPTION SOLVER
+    // 3. INTERACTIVE BLACK-SCHOLES SOLVER
     function CND(x) {
         const a1 = 0.319381530;
         const a2 = -0.356563782;

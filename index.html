@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aastha Gupta | Data Science, AI Systems & Database Internals</title>
-    <meta name="description" content="Portfolio of Aastha Gupta — Computer Science student at VIT Vellore building database engines in Java 21, autonomous AI Text-to-SQL agents, and data analytics pipelines.">
+    <title>Aastha Gupta | Data Analyst, AI & Software Systems</title>
+    <meta name="description" content="Portfolio of Aastha Gupta — Data Analyst & AI Engineer specializing in SQL, Python, BigQuery, Power BI, database internals, and autonomous Text-to-SQL agents.">
 
-    <!-- Google Fonts: Inter & Plus Jakarta Sans & JetBrains Mono -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,30 +20,33 @@
 <body>
 
     <!-- Top Navigation Bar -->
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#hero" class="nav-brand">
-                <span class="brand-badge">AG</span>
-                <span class="brand-text">Aastha Gupta</span>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="#hero" class="brand-logo">
+                <div class="brand-avatar">AG</div>
+                <div class="brand-name">
+                    <span>Aastha Gupta</span>
+                    <small>Data Analyst &amp; Systems</small>
+                </div>
             </a>
 
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#lab" class="nav-link">Interactive Lab</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            <nav class="main-nav" id="main-nav">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#experience" class="nav-item">Experience</a>
+                <a href="#lab" class="nav-item">Interactive Lab</a>
+                <a href="#contact" class="nav-item">Contact</a>
             </nav>
 
-            <div class="nav-actions">
+            <div class="header-cta">
                 <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                     <i class="fab fa-github"></i> GitHub
                 </a>
                 <a href="mailto:aasthagupta1048@gmail.com" class="btn btn-primary btn-sm">
-                    <i class="fas fa-paper-plane"></i> Get in Touch
+                    <i class="fas fa-envelope"></i> Let's Talk
                 </a>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Open Navigation">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -51,352 +54,376 @@
     </header>
 
     <main>
-        <!-- Hero / Showcase Section -->
+        <!-- Hero Section -->
         <section id="hero" class="hero-section">
-            <div class="container hero-container">
-                <div class="hero-left">
-                    <div class="status-pill">
-                        <span class="status-dot"></span> Open for AI, Data Science & Software Roles
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge-pill">
+                        <span class="badge-dot"></span> Open for Data Analytics, AI &amp; Software Roles
                     </div>
 
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Aastha Gupta</span> 👋
+                    <h1 class="hero-headline">
+                        Hi, I'm <span class="highlight">Aastha Gupta</span> 👋
                     </h1>
 
-                    <p class="hero-role">
-                        Computer Science Student @ <strong>VIT Vellore</strong> &middot; Systems Builder &middot; AI & Data Practitioner
+                    <h2 class="hero-tagline">
+                        Data Analyst, AI Engineer &amp; Database Builder
+                    </h2>
+
+                    <p class="hero-lead">
+                        Final-year Computer Science student at <strong>VIT Vellore</strong>. I specialize in turning complex data into clear business insights through <strong>SQL</strong>, <strong>Python</strong>, <strong>Power BI</strong>, and <strong>dbt</strong>, as well as building low-level database engines and AI agents from scratch.
                     </p>
 
-                    <p class="hero-description">
-                        I love solving hard engineering problems—whether it's writing a relational database storage engine from scratch in Java, designing AI agents that turn plain English into SQL queries on 540K+ records, or analyzing complex datasets to find insights that drive decisions.
-                    </p>
-
-                    <div class="hero-buttons">
+                    <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary btn-lg">
-                            <i class="fas fa-folder-open"></i> Explore Projects
+                            <i class="fas fa-layer-group"></i> View Case Studies
                         </a>
-                        <a href="#contact" class="btn btn-secondary btn-lg">
-                            <i class="fas fa-envelope"></i> Contact Me
+                        <a href="mailto:aasthagupta1048@gmail.com" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Contact Me
                         </a>
                     </div>
 
-                    <div class="hero-socials">
-                        <span class="social-label">Find me on:</span>
-                        <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
-                            <i class="fab fa-github"></i>
+                    <div class="hero-social-links">
+                        <span class="social-title">Connect:</span>
+                        <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="social-badge" title="GitHub">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a href="https://www.linkedin.com/in/aastha-gupta-a8b310344/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.linkedin.com/in/aastha-gupta-a8b310344/" target="_blank" rel="noopener noreferrer" class="social-badge" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
-                        <a href="mailto:aasthagupta1048@gmail.com" class="social-icon" title="Email">
-                            <i class="fas fa-envelope"></i>
+                        <a href="mailto:aasthagupta1048@gmail.com" class="social-badge" title="Email">
+                            <i class="fas fa-envelope"></i> Email
                         </a>
                     </div>
                 </div>
 
-                <div class="hero-right">
-                    <div class="hero-card-widget">
-                        <div class="widget-header">
-                            <div class="widget-avatar">AG</div>
-                            <div class="widget-info">
+                <div class="hero-profile-card">
+                    <div class="profile-card-inner">
+                        <div class="profile-header">
+                            <div class="profile-avatar-large">AG</div>
+                            <div>
                                 <h3>Aastha Gupta</h3>
-                                <span>B.Tech CSE @ VIT Vellore</span>
-                            </div>
-                            <span class="cgpa-pill">CGPA 8.5</span>
-                        </div>
-
-                        <div class="widget-stats-grid">
-                            <div class="stat-box">
-                                <strong>540K+</strong>
-                                <span>Records Processed</span>
-                            </div>
-                            <div class="stat-box">
-                                <strong>Java 21</strong>
-                                <span>Engine from Scratch</span>
-                            </div>
-                            <div class="stat-box">
-                                <strong>8+</strong>
-                                <span>Production BI Dashboards</span>
-                            </div>
-                            <div class="stat-box">
-                                <strong>&lt;50ms</strong>
-                                <span>Query Latency</span>
+                                <p>B.Tech CSE @ VIT Vellore &middot; <strong>CGPA: 8.5</strong></p>
                             </div>
                         </div>
 
-                        <div class="widget-code-snippet">
-                            <div class="code-header">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                                <span class="file-name">core_stack.json</span>
+                        <div class="quick-stats-grid">
+                            <div class="quick-stat">
+                                <div class="stat-num">540K+</div>
+                                <div class="stat-desc">Records Analyzed</div>
                             </div>
-                            <pre><code>{
-  "languages": ["Python", "SQL", "Java 21", "C++"],
-  "focus": ["Database Engines", "AI Text-to-SQL", "ETL"],
-  "status": "Ready for Summer 2026 / New Grad"
-}</code></pre>
+                            <div class="quick-stat">
+                                <div class="stat-num">Java 21</div>
+                                <div class="stat-desc">DB Engine from Scratch</div>
+                            </div>
+                            <div class="quick-stat">
+                                <div class="stat-num">8+</div>
+                                <div class="stat-desc">BI Dashboards Shipped</div>
+                            </div>
+                            <div class="quick-stat">
+                                <div class="stat-num">&lt;50ms</div>
+                                <div class="stat-desc">Query Execution Speed</div>
+                            </div>
+                        </div>
+
+                        <div class="profile-focus-box">
+                            <h4><i class="fas fa-bullseye text-primary"></i> Primary Expertise</h4>
+                            <div class="tag-cloud">
+                                <span class="tag tag-blue">SQL / DuckDB</span>
+                                <span class="tag tag-purple">Python / Pandas</span>
+                                <span class="tag tag-emerald">BigQuery / dbt</span>
+                                <span class="tag tag-amber">Power BI / DAX</span>
+                                <span class="tag tag-blue">Text-to-SQL / AI</span>
+                                <span class="tag tag-indigo">Database Internals</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Me / 3 Core Pillars -->
-        <section id="about" class="section about-section">
+        <!-- Stats Counter Bar -->
+        <section class="stats-bar">
+            <div class="container stats-bar-grid">
+                <div class="stats-bar-item">
+                    <i class="fas fa-database text-blue"></i>
+                    <div>
+                        <strong>547,000+</strong>
+                        <span>Records Processed &amp; Modeled</span>
+                    </div>
+                </div>
+                <div class="stats-bar-item">
+                    <i class="fas fa-chart-line text-emerald"></i>
+                    <div>
+                        <strong>8+ KPI Dashboards</strong>
+                        <span>Adopted by Sales Leadership</span>
+                    </div>
+                </div>
+                <div class="stats-bar-item">
+                    <i class="fas fa-robot text-purple"></i>
+                    <div>
+                        <strong>Autonomous AI Agents</strong>
+                        <span>Text-to-SQL &amp; Self-Healing Loops</span>
+                    </div>
+                </div>
+                <div class="stats-bar-item">
+                    <i class="fas fa-code text-amber"></i>
+                    <div>
+                        <strong>Java 21 DB Engine</strong>
+                        <span>B+ Tree, LRU Buffer &amp; WAL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">About Me</span>
-                    <h2 class="section-title">What I Do & Why I Love It</h2>
-                    <p class="section-subtitle">Bridging low-level systems engineering with modern AI and data workflows</p>
+                <div class="section-title-wrap text-center">
+                    <span class="sub-heading">About Me</span>
+                    <h2 class="main-heading">Turning Raw Data into Actionable Strategy</h2>
+                    <p class="section-lead">Combining data engineering pipelines, statistical rigor, and systems programming</p>
                 </div>
 
-                <div class="pillars-grid">
-                    <div class="pillar-card">
-                        <div class="pillar-icon bg-indigo">
-                            <i class="fas fa-server"></i>
+                <div class="cards-3-grid">
+                    <div class="feature-card">
+                        <div class="card-icon icon-blue">
+                            <i class="fas fa-chart-pie"></i>
                         </div>
-                        <h3>Database & Storage Internals</h3>
+                        <h3>Data Analytics &amp; BI</h3>
                         <p>
-                            Built <strong>ForgeDB</strong> from the ground up in Java 21 to master database internals: 4KB slotted binary pages, LRU buffer pool management, B+ Tree indexing, Volcano query execution, and ARIES crash recovery.
+                            Expert in building automated ETL pipelines, multi-stage funnel models, and interactive Power BI dashboards. Experienced in cohort retention, KPI tracking, and statistical hypothesis testing (A/B testing, two-proportion $z$-tests, SRM checks).
                         </p>
                     </div>
 
-                    <div class="pillar-card">
-                        <div class="pillar-icon bg-emerald">
+                    <div class="feature-card">
+                        <div class="card-icon icon-purple">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h3>AI Agents & Text-to-SQL</h3>
+                        <h3>AI &amp; Text-to-SQL Systems</h3>
                         <p>
-                            Architected <strong>DataPulse AI</strong> using LangGraph and FastAPI, translating natural language into validated SQL across 547K+ records with self-healing query loops, dynamic DuckDB reflection, and statistical evaluation.
+                            Built autonomous AI data agents using LangGraph and FastAPI that translate natural language prompts into validated SQL queries on 540K+ records with self-correcting error recovery loops and automated evaluation suites.
                         </p>
                     </div>
 
-                    <div class="pillar-card">
-                        <div class="pillar-icon bg-amber">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="feature-card">
+                        <div class="card-icon icon-emerald">
+                            <i class="fas fa-server"></i>
                         </div>
-                        <h3>Data Engineering & Analytics</h3>
+                        <h3>Database Storage Internals</h3>
                         <p>
-                            Engineered automated dbt pipelines in BigQuery for funnel conversion modeling, analyzed 880K+ loan records in Power BI to forecast credit risk, and deployed fast in-memory OLAP dashboards.
+                            Engineered <strong>ForgeDB</strong> from scratch in Java 21: implemented 4KB binary slotted pages, LRU buffer pool frame caching, disk-backed B+ Tree / Hash indexes, Volcano query execution (<tt>GROUP BY</tt>, <tt>HAVING</tt>), and ARIES crash recovery.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Projects / Portfolio Section -->
-        <section id="projects" class="section projects-section">
+        <!-- Projects / Case Studies Section -->
+        <section id="projects" class="section bg-light">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">Portfolio</span>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">Real systems, open-source codebases, and interactive deployed tools</p>
+                <div class="section-title-wrap">
+                    <span class="sub-heading">Case Studies</span>
+                    <h2 class="main-heading">Featured Projects</h2>
+                    <p class="section-lead">Explore my recent data analysis projects, database engines, and AI systems with full source code and live demos.</p>
                 </div>
 
-                <!-- Category Filter Tabs -->
-                <div class="filter-tabs">
-                    <button class="filter-btn active" data-filter="all">All Projects (7)</button>
-                    <button class="filter-btn" data-filter="ai">AI & Agents</button>
-                    <button class="filter-btn" data-filter="systems">Database Systems</button>
-                    <button class="filter-btn" data-filter="data">Data Engineering</button>
-                    <button class="filter-btn" data-filter="quant">Quantitative Finance</button>
+                <!-- Category Filters -->
+                <div class="filter-bar">
+                    <button class="filter-pill active" data-filter="all">All Projects (7)</button>
+                    <button class="filter-pill" data-filter="data">Data Analytics &amp; BI</button>
+                    <button class="filter-pill" data-filter="ai">AI &amp; Text-to-SQL</button>
+                    <button class="filter-pill" data-filter="systems">Database Systems</button>
+                    <button class="filter-pill" data-filter="quant">Quant Finance</button>
                 </div>
 
-                <!-- Projects Grid -->
-                <div class="projects-grid">
+                <!-- Projects Showcase Grid -->
+                <div class="projects-showcase-grid">
 
                     <!-- PROJECT 1: ForgeDB -->
-                    <div class="project-card" data-category="systems">
-                        <div class="project-top">
-                            <span class="project-tag tag-systems"><i class="fas fa-server"></i> Database Systems</span>
-                            <a href="https://github.com/Aastha008/ForgeDB" target="_blank" rel="noopener noreferrer" class="project-ext-icon" title="View Source on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                    <div class="project-case-card" data-category="systems">
+                        <div class="card-banner banner-systems">
+                            <div class="banner-badge"><i class="fas fa-server"></i> Database Internals</div>
                         </div>
-                        <h3 class="project-title">ForgeDB — Relational Storage Engine & Volcano Query Processor</h3>
-                        <p class="project-desc">
-                            A complete relational database built from scratch in Java 21 featuring 4KB binary slotted pages, LRU frame buffer pool, disk-backed B+ Tree / Hash indexes with range scan pushdowns, Volcano iterator execution (<tt>GROUP BY</tt>, <tt>HAVING</tt>), Strict 2PL concurrency, and WAL with ARIES crash recovery.
-                        </p>
-                        <div class="project-tech-tags">
-                            <span>Java 21</span>
-                            <span>B+ Tree</span>
-                            <span>LRU Buffer Pool</span>
-                            <span>WAL / ARIES</span>
-                            <span>Strict 2PL</span>
-                            <span>SQL Parser</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/Aastha008/ForgeDB" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                                <i class="fab fa-github"></i> GitHub Repo
-                            </a>
+                        <div class="card-body">
+                            <h3 class="card-title">ForgeDB — Relational Storage Engine &amp; Volcano Query Processor</h3>
+                            <p class="card-text">
+                                Full-stack relational database engine built from scratch in Java 21. Implements 4096-byte binary slotted pages, LRU frame buffer pool caching, disk-backed B+ Tree &amp; Hash indexes with $O(\log N)$ range scan pushdowns, Volcano query execution (<tt>GROUP BY</tt>, <tt>HAVING</tt>), Strict 2PL concurrency, and WAL with ARIES crash recovery.
+                            </p>
+                            <div class="card-tags">
+                                <span>Java 21</span>
+                                <span>B+ Tree</span>
+                                <span>LRU Buffer Pool</span>
+                                <span>WAL / ARIES</span>
+                                <span>Strict 2PL</span>
+                                <span>SQL Parser</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/Aastha008/ForgeDB" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> GitHub Repository
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- PROJECT 2: DataPulse AI -->
-                    <div class="project-card" data-category="ai">
-                        <div class="project-top">
-                            <span class="project-tag tag-ai"><i class="fas fa-brain"></i> AI & Text-to-SQL</span>
-                            <a href="https://github.com/Aastha008/DataPulseAI" target="_blank" rel="noopener noreferrer" class="project-ext-icon" title="View Source on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                    <div class="project-case-card" data-category="ai">
+                        <div class="card-banner banner-ai">
+                            <div class="banner-badge"><i class="fas fa-brain"></i> AI &amp; Text-to-SQL</div>
                         </div>
-                        <h3 class="project-title">DataPulse AI — Autonomous Product Intelligence & Experimentation Engine</h3>
-                        <p class="project-desc">
-                            Autonomous analytics platform on 547K+ e-commerce records with a self-healing Text-to-SQL pipeline, dynamic DuckDB schema reflection, sub-50ms execution, and a deterministic SciPy statistical engine (two-proportion z-test, Chi-square SRM detection, and automated evals).
-                        </p>
-                        <div class="project-tech-tags">
-                            <span>Python</span>
-                            <span>LangGraph</span>
-                            <span>DuckDB</span>
-                            <span>FastAPI</span>
-                            <span>SciPy</span>
-                            <span>Streamlit</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/Aastha008/DataPulseAI" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://datapulse-ai.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Live App
-                            </a>
+                        <div class="card-body">
+                            <h3 class="card-title">DataPulse AI — Autonomous Product Intelligence &amp; Experimentation</h3>
+                            <p class="card-text">
+                                Autonomous analytics platform on 547K+ e-commerce records. Engineered a self-healing Text-to-SQL pipeline with dynamic DuckDB schema reflection, sub-50ms execution, and a deterministic SciPy statistical engine (two-proportion $z$-test, Chi-square SRM detection, and automated evals).
+                            </p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>LangGraph</span>
+                                <span>DuckDB</span>
+                                <span>FastAPI</span>
+                                <span>SciPy</span>
+                                <span>Streamlit</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/Aastha008/DataPulseAI" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://datapulse-ai.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-external-link-alt"></i> Live App
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- PROJECT 3: PulseCart -->
-                    <div class="project-card" data-category="data">
-                        <div class="project-top">
-                            <span class="project-tag tag-data"><i class="fas fa-chart-line"></i> Data Engineering</span>
-                            <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="project-ext-icon" title="View Source on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                    <div class="project-case-card" data-category="data">
+                        <div class="card-banner banner-data">
+                            <div class="banner-badge"><i class="fas fa-funnel-dollar"></i> Funnel &amp; A/B Testing</div>
                         </div>
-                        <h3 class="project-title">PulseCart — E-Commerce Funnel Optimization & Retention Pipeline</h3>
-                        <p class="project-desc">
-                            Automated dbt transformation pipeline in Google BigQuery modeling multi-stage funnel drop-offs and retention cohorts across 100K+ transaction sessions; evaluated checkout A/B test ($z$-test, 95% CI) identifying an 8.9% conversion lift ($p < 0.05$).
-                        </p>
-                        <div class="project-tech-tags">
-                            <span>Google BigQuery</span>
-                            <span>dbt</span>
-                            <span>SQL</span>
-                            <span>A/B Testing</span>
-                            <span>Power BI</span>
-                            <span>DAX</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                                <i class="fab fa-github"></i> GitHub Profile
-                            </a>
+                        <div class="card-body">
+                            <h3 class="card-title">PulseCart — E-Commerce Funnel Optimization &amp; Retention Pipeline</h3>
+                            <p class="card-text">
+                                Automated dbt transformation pipeline in Google BigQuery modeling multi-stage funnel drop-offs and retention cohorts across 100K+ transaction sessions. Evaluated checkout A/B test via two-proportion $z$-test (95% CI) identifying an 8.9% conversion lift ($p < 0.05$) and deployed a Power BI dashboard.
+                            </p>
+                            <div class="card-tags">
+                                <span>Google BigQuery</span>
+                                <span>dbt</span>
+                                <span>SQL</span>
+                                <span>A/B Testing</span>
+                                <span>Power BI</span>
+                                <span>DAX</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> GitHub Profile
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- PROJECT 4: CreditLens -->
-                    <div class="project-card" data-category="data">
-                        <div class="project-top">
-                            <span class="project-tag tag-data"><i class="fas fa-shield-alt"></i> Risk Analytics</span>
-                            <a href="https://github.com/Aastha008/CreditRiskAnalysis" target="_blank" rel="noopener noreferrer" class="project-ext-icon" title="View Source on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                    <div class="project-case-card" data-category="data">
+                        <div class="card-banner banner-data">
+                            <div class="banner-badge"><i class="fas fa-shield-alt"></i> Credit Risk Diagnostic</div>
                         </div>
-                        <h3 class="project-title">CreditLens — Consumer Credit Default Modeling & Risk Diagnostic</h3>
-                        <p class="project-desc">
-                            Analyzed 887K+ loan records to identify borrower default drivers across grades (6.4x default rate spread), proving income-to-loan predictive power and deploying an interactive 4-page Power BI credit risk dashboard.
-                        </p>
-                        <div class="project-tech-tags">
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>SQL</span>
-                            <span>Power BI</span>
-                            <span>DAX</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/Aastha008/CreditRiskAnalysis" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                                <i class="fab fa-github"></i> GitHub Repo
-                            </a>
+                        <div class="card-body">
+                            <h3 class="card-title">CreditLens — Consumer Credit Default Modeling &amp; Risk Dashboard</h3>
+                            <p class="card-text">
+                                Analyzed 887K+ loan records to identify default drivers across grades (6.4x default rate spread), proving income-to-loan predictive power over gross income alone, and deployed an interactive 4-page Power BI dashboard for executive portfolio health monitoring.
+                            </p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>SQL</span>
+                                <span>Power BI</span>
+                                <span>DAX</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/Aastha008/CreditRiskAnalysis" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> GitHub Repo
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- PROJECT 5: DinePulse -->
-                    <div class="project-card" data-category="data">
-                        <div class="project-top">
-                            <span class="project-tag tag-data"><i class="fas fa-database"></i> In-Memory OLAP</span>
-                            <a href="https://github.com/Aastha008/zomato-restaurant-analysis" target="_blank" rel="noopener noreferrer" class="project-ext-icon" title="View Source on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                    <div class="project-case-card" data-category="data">
+                        <div class="card-banner banner-data">
+                            <div class="banner-badge"><i class="fas fa-utensils"></i> In-Memory OLAP</div>
                         </div>
-                        <h3 class="project-title">DinePulse — Food-Tech Market Intelligence & OLAP Platform</h3>
-                        <p class="project-desc">
-                            Interactive restaurant analytics platform on 50,000+ listings backed by an in-process DuckDB SQL layer shared between Jupyter exploration and Streamlit, achieving sub-50ms query latency.
-                        </p>
-                        <div class="project-tech-tags">
-                            <span>Python</span>
-                            <span>DuckDB</span>
-                            <span>Pandas</span>
-                            <span>Streamlit</span>
-                            <span>SQL</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/Aastha008/zomato-restaurant-analysis" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://zomato-restaurant-analysis.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
-                                <i class="fas fa-external-link-alt"></i> Live App
-                            </a>
+                        <div class="card-body">
+                            <h3 class="card-title">DinePulse — Food-Tech Market Intelligence &amp; In-Memory OLAP</h3>
+                            <p class="card-text">
+                                Interactive analytics platform on 50,000+ restaurant listings backed by an in-process DuckDB SQL layer shared identically between Jupyter exploratory notebooks and live Streamlit dashboards, achieving sub-50ms query response times.
+                            </p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>DuckDB</span>
+                                <span>Pandas</span>
+                                <span>Streamlit</span>
+                                <span>SQL</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/Aastha008/zomato-restaurant-analysis" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://zomato-restaurant-analysis.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-external-link-alt"></i> Live App
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- PROJECT 6: Options Pricing -->
-                    <div class="project-card" data-category="quant">
-                        <div class="project-top">
-                            <span class="project-tag tag-quant"><i class="fas fa-chart-area"></i> Quantitative Finance</span>
-                            <a href="https://github.com/Aastha008/Options-Pricing-Dashboard" target="_blank" rel="noopener noreferrer" class="project-ext-icon" title="View Source on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                    <div class="project-case-card" data-category="quant">
+                        <div class="card-banner banner-quant">
+                            <div class="banner-badge"><i class="fas fa-calculator"></i> Quantitative Finance</div>
                         </div>
-                        <h3 class="project-title">Options Pricing & Risk Analytics Dashboard</h3>
-                        <p class="project-desc">
-                            Full-stack quant finance dashboard with closed-form Black-Scholes pricing, analytical Greeks ($\Delta, \Gamma, \mathcal{V}, \Theta, \rho$), Monte Carlo GBM simulation, GARCH/EWMA vol forecasting, and portfolio VaR/CVaR (95%/99%).
-                        </p>
-                        <div class="project-tech-tags">
-                            <span>Python</span>
-                            <span>QuantLib</span>
-                            <span>Streamlit</span>
-                            <span>SciPy</span>
-                            <span>Monte Carlo</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/Aastha008/Options-Pricing-Dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                                <i class="fab fa-github"></i> Repo
-                            </a>
-                            <a href="#lab" class="btn btn-sm btn-primary">
-                                <i class="fas fa-calculator"></i> Try Live Solver
-                            </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Options Pricing &amp; Risk Analytics Dashboard</h3>
+                            <p class="card-text">
+                                Full-stack quant dashboard with closed-form Black-Scholes pricing, analytical Greeks ($\Delta, \Gamma, \mathcal{V}, \Theta, \rho$), Monte Carlo GBM simulation, GARCH/EWMA vol forecasting, and portfolio VaR/CVaR (95%/99%) risk engine on live market feeds.
+                            </p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>QuantLib</span>
+                                <span>Streamlit</span>
+                                <span>SciPy</span>
+                                <span>Monte Carlo</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/Aastha008/Options-Pricing-Dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> Repo
+                                </a>
+                                <a href="#lab" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-calculator"></i> Test Solver
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- PROJECT 7: Medical Store Inventory -->
-                    <div class="project-card" data-category="systems">
-                        <div class="project-top">
-                            <span class="project-tag tag-systems"><i class="fas fa-boxes"></i> Full-Stack Software</span>
-                            <a href="https://github.com/Aastha008/Inventory_Management_system" target="_blank" rel="noopener noreferrer" class="project-ext-icon" title="View Source on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                    <div class="project-case-card" data-category="systems">
+                        <div class="card-banner banner-systems">
+                            <div class="banner-badge"><i class="fas fa-clinic-medical"></i> Enterprise Software</div>
                         </div>
-                        <h3 class="project-title">Smart Medical Store Inventory System</h3>
-                        <p class="project-desc">
-                            Production pharmacy inventory management system built at Bharuwa Solutions. Built REST APIs in .NET Core with Angular frontend across a 20-table MS SQL Server schema, writing 10+ stored procedures enforcing referential integrity.
-                        </p>
-                        <div class="project-tech-tags">
-                            <span>.NET Core</span>
-                            <span>Angular</span>
-                            <span>MS SQL Server</span>
-                            <span>C#</span>
-                            <span>REST APIs</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="https://github.com/Aastha008/Inventory_Management_system" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                                <i class="fab fa-github"></i> GitHub Repo
-                            </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Smart Medical Store Inventory &amp; Billing Management System</h3>
+                            <p class="card-text">
+                                Production pharmacy inventory system built during internship at Bharuwa Solutions. Engineered REST APIs in .NET Core with Angular frontend across a 20-table MS SQL Server schema, authoring 10+ stored procedures enforcing referential integrity.
+                            </p>
+                            <div class="card-tags">
+                                <span>.NET Core</span>
+                                <span>Angular</span>
+                                <span>MS SQL Server</span>
+                                <span>C#</span>
+                                <span>REST APIs</span>
+                            </div>
+                            <div class="card-actions">
+                                <a href="https://github.com/Aastha008/Inventory_Management_system" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> GitHub Repo
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -405,60 +432,58 @@
         </section>
 
         <!-- Technical Skills Section -->
-        <section id="skills" class="section skills-section">
+        <section id="skills" class="section">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">Technical Stack</span>
-                    <h2 class="section-title">Skills & Technologies</h2>
-                    <p class="section-subtitle">The tools, languages, and frameworks I use to build robust software and data systems</p>
+                <div class="section-title-wrap text-center">
+                    <span class="sub-heading">Technical Stack</span>
+                    <h2 class="main-heading">Skills &amp; Toolkit</h2>
+                    <p class="section-lead">Technologies and tools I work with daily</p>
                 </div>
 
-                <div class="skills-cards-grid">
-                    <div class="skill-category-card">
-                        <div class="skill-cat-header">
-                            <i class="fas fa-brain text-indigo"></i>
-                            <h4>AI, LLMs & Machine Learning</h4>
+                <div class="skills-grid-modern">
+                    <div class="skill-box">
+                        <div class="skill-box-head">
+                            <i class="fas fa-brain text-purple"></i>
+                            <h4>AI &amp; Text-to-SQL</h4>
                         </div>
-                        <div class="skill-pills">
-                            <span class="pill-highlight">LangGraph</span>
-                            <span class="pill-highlight">LangChain</span>
-                            <span class="pill-highlight">Text-to-SQL</span>
-                            <span class="pill-highlight">RAG Architectures</span>
+                        <div class="skill-chips">
+                            <span class="chip-primary">LangGraph</span>
+                            <span class="chip-primary">LangChain</span>
+                            <span class="chip-primary">Text-to-SQL</span>
+                            <span class="chip-primary">RAG Architectures</span>
                             <span>Agentic Workflows</span>
                             <span>Prompt Engineering</span>
                             <span>LLM Evals (pytest)</span>
                             <span>Scikit-Learn</span>
-                            <span>TensorFlow Lite</span>
                         </div>
                     </div>
 
-                    <div class="skill-category-card">
-                        <div class="skill-cat-header">
-                            <i class="fas fa-server text-emerald"></i>
-                            <h4>Database & Systems Internals</h4>
+                    <div class="skill-box">
+                        <div class="skill-box-head">
+                            <i class="fas fa-server text-blue"></i>
+                            <h4>Database Internals</h4>
                         </div>
-                        <div class="skill-pills">
-                            <span class="pill-highlight">Volcano Query Engine</span>
-                            <span class="pill-highlight">B+ Tree Indexing</span>
-                            <span class="pill-highlight">Slotted-Page Storage</span>
-                            <span class="pill-highlight">LRU Buffer Pool</span>
+                        <div class="skill-chips">
+                            <span class="chip-primary">Volcano Query Engine</span>
+                            <span class="chip-primary">B+ Tree Indexing</span>
+                            <span class="chip-primary">Slotted Pages (4KB)</span>
+                            <span class="chip-primary">LRU Buffer Pool</span>
                             <span>WAL Logging</span>
-                            <span>ARIES Recovery</span>
+                            <span>ARIES Crash Recovery</span>
                             <span>Strict 2PL Concurrency</span>
-                            <span>Hash Indexes</span>
-                            <span>SQL Lexer / AST</span>
+                            <span>SQL Lexer / Parser</span>
                         </div>
                     </div>
 
-                    <div class="skill-category-card">
-                        <div class="skill-cat-header">
-                            <i class="fas fa-database text-blue"></i>
-                            <h4>Data Engineering & Cloud</h4>
+                    <div class="skill-box">
+                        <div class="skill-box-head">
+                            <i class="fas fa-database text-emerald"></i>
+                            <h4>Data Engineering &amp; Cloud</h4>
                         </div>
-                        <div class="skill-pills">
-                            <span class="pill-highlight">dbt</span>
-                            <span class="pill-highlight">Google BigQuery</span>
-                            <span class="pill-highlight">DuckDB (In-Memory OLAP)</span>
+                        <div class="skill-chips">
+                            <span class="chip-primary">dbt</span>
+                            <span class="chip-primary">Google BigQuery</span>
+                            <span class="chip-primary">DuckDB (In-Memory OLAP)</span>
                             <span>Star Schema Modeling</span>
                             <span>ETL / ELT Pipelines</span>
                             <span>PostgreSQL</span>
@@ -467,47 +492,46 @@
                         </div>
                     </div>
 
-                    <div class="skill-category-card">
-                        <div class="skill-cat-header">
+                    <div class="skill-box">
+                        <div class="skill-box-head">
                             <i class="fas fa-code text-amber"></i>
-                            <h4>Programming Languages</h4>
+                            <h4>Languages</h4>
                         </div>
-                        <div class="skill-pills">
-                            <span class="pill-highlight">Python</span>
-                            <span class="pill-highlight">SQL</span>
-                            <span class="pill-highlight">Java (JDK 21)</span>
+                        <div class="skill-chips">
+                            <span class="chip-primary">Python (Pandas, NumPy, SciPy)</span>
+                            <span class="chip-primary">SQL (All Flavors)</span>
+                            <span class="chip-primary">Java (JDK 21)</span>
                             <span>C++</span>
                             <span>C#</span>
                             <span>DAX</span>
-                            <span>C</span>
                         </div>
                     </div>
 
-                    <div class="skill-category-card">
-                        <div class="skill-cat-header">
-                            <i class="fas fa-chart-line text-purple"></i>
-                            <h4>Analytics & Experimentation</h4>
+                    <div class="skill-box">
+                        <div class="skill-box-head">
+                            <i class="fas fa-chart-line text-blue"></i>
+                            <h4>Analytics &amp; Statistics</h4>
                         </div>
-                        <div class="skill-pills">
-                            <span class="pill-highlight">A/B Testing ($z$-tests)</span>
-                            <span class="pill-highlight">Power BI (DAX)</span>
+                        <div class="skill-chips">
+                            <span class="chip-primary">A/B Testing (Two-Proportion $z$-test)</span>
+                            <span class="chip-primary">Power BI (DAX)</span>
                             <span>Sample Ratio Mismatch ($\chi^2$)</span>
-                            <span>Funnel & Cohort Analysis</span>
+                            <span>Funnel &amp; Cohort Retention</span>
                             <span>Statistical Modeling (SciPy)</span>
                             <span>KPI Metric Tracking</span>
                         </div>
                     </div>
 
-                    <div class="skill-category-card">
-                        <div class="skill-cat-header">
-                            <i class="fas fa-tools text-cyan"></i>
-                            <h4>Frameworks & Tools</h4>
+                    <div class="skill-box">
+                        <div class="skill-box-head">
+                            <i class="fas fa-tools text-purple"></i>
+                            <h4>Frameworks &amp; Tools</h4>
                         </div>
-                        <div class="skill-pills">
-                            <span class="pill-highlight">FastAPI (REST APIs)</span>
-                            <span class="pill-highlight">Streamlit</span>
-                            <span class="pill-highlight">Docker</span>
-                            <span>Git & GitHub</span>
+                        <div class="skill-chips">
+                            <span class="chip-primary">FastAPI (REST APIs)</span>
+                            <span class="chip-primary">Streamlit</span>
+                            <span class="chip-primary">Docker</span>
+                            <span>Git &amp; GitHub</span>
                             <span>Postman</span>
                             <span>Jupyter</span>
                             <span>.NET Core</span>
@@ -518,67 +542,64 @@
             </div>
         </section>
 
-        <!-- Experience & Education Timeline -->
-        <section id="experience" class="section experience-section">
+        <!-- Experience & Education Section -->
+        <section id="experience" class="section bg-light">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">Work & Background</span>
-                    <h2 class="section-title">Experience & Education</h2>
-                    <p class="section-subtitle">My professional journey, internships, and academic foundation</p>
+                <div class="section-title-wrap text-center">
+                    <span class="sub-heading">Career Journey</span>
+                    <h2 class="main-heading">Experience &amp; Education</h2>
+                    <p class="section-lead">Industry internships and academic background</p>
                 </div>
 
-                <div class="timeline-container">
+                <div class="timeline-wrapper">
 
-                    <!-- Experience 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"><i class="fas fa-chart-bar"></i></div>
-                        <div class="timeline-card">
-                            <div class="timeline-meta">
+                    <div class="timeline-row">
+                        <div class="timeline-icon icon-blue"><i class="fas fa-chart-pie"></i></div>
+                        <div class="timeline-content-card">
+                            <div class="timeline-top">
                                 <div>
-                                    <h3 class="timeline-role">Data Analytics Intern</h3>
-                                    <h4 class="timeline-company">Omoiyari Greentech Pvt. Ltd.</h4>
+                                    <h3>Data Analytics Intern</h3>
+                                    <h4>Omoiyari Greentech Pvt. Ltd.</h4>
                                 </div>
-                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> May 2026 – Jul 2026</span>
+                                <span class="date-badge">May 2026 – Jul 2026</span>
                             </div>
-                            <ul class="timeline-bullets">
+                            <ul class="bullet-list">
                                 <li>Cleaned, transformed, and validated 50,000+ rows of raw sales data using Python (Pandas) and SQL, resolving data-quality issues before pipeline ingestion.</li>
                                 <li>Delivered 8+ interactive Power BI KPI dashboards on regional revenue trends adopted by sales leadership, saving ~3 hours per week in reporting (rated 9.7/10).</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Experience 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"><i class="fas fa-laptop-code"></i></div>
-                        <div class="timeline-card">
-                            <div class="timeline-meta">
+                    <div class="timeline-row">
+                        <div class="timeline-icon icon-purple"><i class="fas fa-laptop-code"></i></div>
+                        <div class="timeline-content-card">
+                            <div class="timeline-top">
                                 <div>
-                                    <h3 class="timeline-role">Software Development Intern</h3>
-                                    <h4 class="timeline-company">Bharuwa Solutions Pvt. Ltd.</h4>
+                                    <h3>Software Development Intern</h3>
+                                    <h4>Bharuwa Solutions Pvt. Ltd.</h4>
                                 </div>
-                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> May 2025 – Jun 2025</span>
+                                <span class="date-badge">May 2025 – Jun 2025</span>
                             </div>
-                            <ul class="timeline-bullets">
+                            <ul class="bullet-list">
                                 <li>Built REST APIs in .NET Core with Angular frontend across a 20-table MS SQL Server schema for pharmacy inventory, billing, and supplier modules.</li>
                                 <li>Authored 10+ stored procedures enforcing referential integrity, eliminating data inconsistency errors during testing.</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Education -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"><i class="fas fa-graduation-cap"></i></div>
-                        <div class="timeline-card edu-highlight">
-                            <div class="timeline-meta">
+                    <div class="timeline-row">
+                        <div class="timeline-icon icon-emerald"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="timeline-content-card edu-card-accent">
+                            <div class="timeline-top">
                                 <div>
-                                    <h3 class="timeline-role">B.Tech in Computer Science & Engineering (IoT)</h3>
-                                    <h4 class="timeline-company">Vellore Institute of Technology (VIT Vellore)</h4>
+                                    <h3>B.Tech in Computer Science &amp; Engineering (IoT)</h3>
+                                    <h4>Vellore Institute of Technology (VIT Vellore)</h4>
                                 </div>
-                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2023 – Present</span>
+                                <span class="date-badge">2023 – Present</span>
                             </div>
-                            <p class="timeline-edu-desc">
+                            <p class="edu-text">
                                 <strong>CGPA: 8.5</strong> &middot; CBSE Class XII: 92.2% &middot; CBSE Class X: 91%<br>
-                                Coursework: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, OOP, and Applied Statistics.
+                                Coursework: Data Structures &amp; Algorithms, DBMS, Operating Systems, Computer Networks, OOP, and Applied Statistics.
                             </p>
                         </div>
                     </div>
@@ -587,57 +608,57 @@
             </div>
         </section>
 
-        <!-- Interactive Quant Lab Section -->
-        <section id="lab" class="section lab-section">
+        <!-- Interactive Lab Section -->
+        <section id="lab" class="section">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-badge">Live Tool</span>
-                    <h2 class="section-title">Interactive Option Pricing Solver</h2>
-                    <p class="section-subtitle">Real-time Black-Scholes European pricing and analytical Greeks engine ($\Delta, \Gamma, \mathcal{V}$)</p>
+                <div class="section-title-wrap text-center">
+                    <span class="sub-heading">Live Demo</span>
+                    <h2 class="main-heading">Interactive Option Pricing Solver</h2>
+                    <p class="section-lead">Real-time Black-Scholes European pricing and analytical Greeks engine ($\Delta, \Gamma, \mathcal{V}$)</p>
                 </div>
 
-                <div class="lab-card">
-                    <div class="lab-inputs-grid">
-                        <div class="lab-input-group">
+                <div class="solver-card">
+                    <div class="solver-inputs">
+                        <div class="solver-field">
                             <label for="lab-spot">Spot Price ($S_0$)</label>
                             <input type="number" id="lab-spot" value="100" min="1" step="1">
                         </div>
-                        <div class="lab-input-group">
+                        <div class="solver-field">
                             <label for="lab-strike">Strike Price ($K$)</label>
                             <input type="number" id="lab-strike" value="100" min="1" step="1">
                         </div>
-                        <div class="lab-input-group">
+                        <div class="solver-field">
                             <label for="lab-rate">Risk-Free Rate ($r$ %)</label>
                             <input type="number" id="lab-rate" value="5" step="0.5">
                         </div>
-                        <div class="lab-input-group">
+                        <div class="solver-field">
                             <label for="lab-vol">Volatility ($\sigma$ %)</label>
                             <input type="number" id="lab-vol" value="20" step="1">
                         </div>
-                        <div class="lab-input-group">
+                        <div class="solver-field">
                             <label for="lab-time">Time to Expiry ($T$ Yrs)</label>
                             <input type="number" id="lab-time" value="1.0" step="0.1" min="0.01">
                         </div>
                     </div>
 
-                    <div class="lab-results-grid">
-                        <div class="lab-res-box">
+                    <div class="solver-outputs">
+                        <div class="output-box">
                             <span>Call Price</span>
                             <strong id="lab-call-res" class="text-emerald">$10.45</strong>
                         </div>
-                        <div class="lab-res-box">
+                        <div class="output-box">
                             <span>Put Price</span>
                             <strong id="lab-put-res" class="text-amber">$5.57</strong>
                         </div>
-                        <div class="lab-res-box">
+                        <div class="output-box">
                             <span>Delta ($\Delta$)</span>
-                            <strong id="lab-delta-res" class="text-indigo">0.636</strong>
+                            <strong id="lab-delta-res" class="text-blue">0.636</strong>
                         </div>
-                        <div class="lab-res-box">
+                        <div class="output-box">
                             <span>Gamma ($\Gamma$)</span>
                             <strong id="lab-gamma-res">0.019</strong>
                         </div>
-                        <div class="lab-res-box">
+                        <div class="output-box">
                             <span>Vega ($\mathcal{V}$)</span>
                             <strong id="lab-vega-res">0.375</strong>
                         </div>
@@ -647,57 +668,57 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section contact-section">
+        <section id="contact" class="section bg-light">
             <div class="container">
-                <div class="contact-card">
-                    <div class="contact-left">
-                        <span class="section-badge">Get in Touch</span>
-                        <h2 class="contact-title">Let's build something together!</h2>
-                        <p class="contact-subtitle">
-                            I'm actively looking for Summer 2026 / New Grad opportunities in <strong>AI Engineering</strong>, <strong>Data Science & Analytics</strong>, and <strong>Software Systems</strong>.
+                <div class="contact-box-modern">
+                    <div class="contact-box-left">
+                        <span class="sub-heading">Get in Touch</span>
+                        <h2 class="main-heading">Let's build something great together!</h2>
+                        <p class="section-lead">
+                            I'm actively seeking Summer 2026 / New Grad opportunities in <strong>Data Analytics</strong>, <strong>AI Engineering</strong>, and <strong>Software Systems</strong>.
                         </p>
 
-                        <div class="contact-info-list">
-                            <a href="mailto:aasthagupta1048@gmail.com" class="contact-info-item">
-                                <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-links-grid">
+                            <a href="mailto:aasthagupta1048@gmail.com" class="contact-link-pill">
+                                <i class="fas fa-envelope text-blue"></i>
                                 <div>
-                                    <span>Email</span>
+                                    <small>Email</small>
                                     <strong>aasthagupta1048@gmail.com</strong>
                                 </div>
                             </a>
-                            <a href="https://www.linkedin.com/in/aastha-gupta-a8b310344/" target="_blank" rel="noopener noreferrer" class="contact-info-item">
-                                <div class="c-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <a href="https://www.linkedin.com/in/aastha-gupta-a8b310344/" target="_blank" rel="noopener noreferrer" class="contact-link-pill">
+                                <i class="fab fa-linkedin text-purple"></i>
                                 <div>
-                                    <span>LinkedIn</span>
-                                    <strong>linkedin.com/in/aastha-gupta-a8b310344</strong>
+                                    <small>LinkedIn</small>
+                                    <strong>linkedin.com/in/aastha-gupta</strong>
                                 </div>
                             </a>
-                            <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="contact-info-item">
-                                <div class="c-icon"><i class="fab fa-github"></i></div>
+                            <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="contact-link-pill">
+                                <i class="fab fa-github text-emerald"></i>
                                 <div>
-                                    <span>GitHub</span>
+                                    <small>GitHub</small>
                                     <strong>github.com/Aastha008</strong>
                                 </div>
                             </a>
                         </div>
                     </div>
 
-                    <div class="contact-right">
-                        <form id="contact-form" class="contact-form" action="mailto:aasthagupta1048@gmail.com" method="POST" enctype="text/plain">
-                            <div class="form-group">
+                    <div class="contact-box-right">
+                        <form id="contact-form" action="mailto:aasthagupta1048@gmail.com" method="POST" enctype="text/plain" class="modern-form">
+                            <div class="form-row">
                                 <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                                <input type="text" id="name" name="name" required placeholder="Alex Smith">
                             </div>
-                            <div class="form-group">
+                            <div class="form-row">
                                 <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                                <input type="email" id="email" name="email" required placeholder="alex@company.com">
                             </div>
-                            <div class="form-group">
+                            <div class="form-row">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="4" required placeholder="Hi Aastha, I loved your ForgeDB and DataPulse projects..."></textarea>
+                                <textarea id="message" name="message" rows="4" required placeholder="Hi Aastha, I saw your portfolio and would love to discuss..."></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">
-                                <i class="fas fa-paper-plane"></i> Send Direct Message
+                            <button type="submit" class="btn btn-primary w-100 btn-lg">
+                                <i class="fas fa-paper-plane"></i> Send Message
                             </button>
                         </form>
                     </div>
@@ -707,12 +728,12 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-left">
-                <strong>Aastha Gupta</strong> &copy; 2026 &middot; Built with modern HTML, CSS & JavaScript
+    <footer class="site-footer">
+        <div class="container footer-flex">
+            <div class="footer-copy">
+                &copy; 2026 <strong>Aastha Gupta</strong> &middot; Data Analyst &amp; AI Systems Engineer
             </div>
-            <div class="footer-right">
+            <div class="footer-links">
                 <a href="#hero">Back to Top <i class="fas fa-arrow-up"></i></a>
             </div>
         </div>
