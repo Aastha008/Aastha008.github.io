@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aastha Gupta | AI Systems, Database Internals & Data Engineering</title>
+    <meta name="description" content="Portfolio of Aastha Gupta - Computer Science student at VIT Vellore specializing in AI Agents & LLMs, Database Storage Internals, Data Engineering, and Quantitative Risk Analytics.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+
+    <!-- Subtle WebGL Background Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">Aastha Gupta</a>
+            
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#quant-lab" class="nav-link">Quant Lab</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <button class="btn btn-primary btn-sm" id="open-resume-btn">
+                    <i class="fas fa-file-pdf"></i> Resume
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <nav class="mobile-nav">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#quant-lab" class="mobile-link">Quant Lab</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <div class="mobile-footer">
+                <a href="https://github.com/Aastha008" target="_blank" class="btn btn-outline w-100">
+                    <i class="fab fa-github"></i> GitHub Profile
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-intro">
+                    <div class="status-pill">
+                        <span class="status-dot"></span> Open for Data Science, Quant & Software Roles
+                    </div>
+                    
+                    <h1 class="hero-heading">
+                        Hi, I'm <span class="highlight-text">Aastha Gupta</span>.
+                    </h1>
+                    
+                    <p class="hero-subheading">
+                        Computer Science student at <strong>VIT Vellore</strong> specializing in <strong>AI Agents & LLM Systems</strong>, <strong>Database Storage Internals</strong>, <strong>Data Engineering</strong>, and <strong>Quantitative Risk Analytics</strong>.
+                    </p>
+
+                    <p class="hero-bio">
+                        CS undergraduate skilled in engineering autonomous AI Text-to-SQL pipelines, custom database engines in Java 21, and statistical analytics applications. Built and deployed full-stack systems across 500K+ records with sub-50ms query execution.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary btn-lg">
+                            <i class="fas fa-folder-open"></i> View Projects
+                        </a>
+                        <a href="#quant-lab" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-chart-line"></i> Try Quant Pricing Lab
+                        </a>
+                        <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/aastha-gupta-a8b310344/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-title-group">
+                    <h2 class="section-heading">About Me</h2>
+                    <p class="section-subheading">A quick overview of my background and core areas of work</p>
+                </div>
+
+                <div class="about-cards-grid">
+                    <div class="card about-card">
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
+                        <h3>Data & Analytics</h3>
+                        <p>I enjoy building clean data pipelines, running statistical analyses, and creating interactive BI dashboards that convert large datasets into clear, actionable business insights.</p>
+                    </div>
+
+                    <div class="card about-card">
+                        <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                        <h3>Quantitative Finance</h3>
+                        <p>Fascinated by mathematical finance and risk modeling. I build engines for Black-Scholes option pricing, analytical Greeks, GARCH/EWMA volatility forecasting, and Value-at-Risk (VaR/CVaR).</p>
+                    </div>
+
+                    <div class="card about-card">
+                        <div class="card-icon"><i class="fas fa-code"></i></div>
+                        <h3>Software Engineering & IoT</h3>
+                        <p>Backed by production software internship experience building .NET Core REST APIs and Angular frontends, as well as deploying TensorFlow Lite models on ESP32 microcontrollers.</p>
+                    </div>
+                </div>
+
+                <!-- Education Card -->
+                <div class="card edu-card">
+                    <div class="edu-content">
+                        <div class="edu-main">
+                            <span class="badge badge-primary">Education</span>
+                            <h3>B.Tech in Computer Science & Engineering (IoT)</h3>
+                            <h4>Vellore Institute of Technology</h4>
+                            <p class="edu-desc">Relevant Coursework: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, Object-Oriented Programming, and Applied Statistics.</p>
+                        </div>
+                        <div class="edu-side">
+                            <div class="cgpa-badge">CGPA: 8.5</div>
+                            <span class="edu-year">2023 – Present</span>
+                            <div class="school-scores">
+                                <span>CBSE Class XII: <strong>92.92%</strong></span>
+                                <span>CBSE Class X: <strong>91.00%</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-title-group">
+                    <h2 class="section-heading">Featured Projects</h2>
+                    <p class="section-subheading">Here are key projects I've built, featuring real GitHub source code repositories and live interactive dashboards</p>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- PROJECT 1: ForgeDB -->
+                    <div class="card project-card">
+                        <div class="project-header">
+                            <span class="category-tag">Database Systems & Storage</span>
+                            <h3>ForgeDB — Relational Storage Engine \& Volcano Query Processor</h3>
+                        </div>
+                        <p class="project-summary">
+                            Full-stack relational database engine built from scratch in Java 21 with 4KB binary slotted pages, LRU frame buffer pool, disk-backed B+ Tree & Hash indexes, Volcano iterator execution, Strict 2PL concurrency, and ARIES crash recovery.
+                        </p>
+                        
+                        <div class="project-bullets">
+                            <ul>
+                                <li>Implemented 4096-byte binary slotted page layout, LRU frame caching buffer pool, and disk block allocation.</li>
+                                <li>Built multi-way B+ Tree and Hash indexing with rule-based optimizer for $O(\log N)$ range scan pushdowns.</li>
+                                <li>Engineered Strict 2-Phase Locking (2PL), append-only WAL with ARIES 3-phase crash recovery, and an interactive Database Studio management UI.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tag-group">
+                            <span class="tech-badge">Java 21</span>
+                            <span class="tech-badge">B+ Tree</span>
+                            <span class="tech-badge">LRU Buffer Pool</span>
+                            <span class="tech-badge">WAL / ARIES</span>
+                            <span class="tech-badge">Strict 2PL</span>
+                            <span class="tech-badge">SQL Parser</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Aastha008/ForgeDB" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2: DataPulse AI -->
+                    <div class="card project-card">
+                        <div class="project-header">
+                            <span class="category-tag">AI & Autonomous Analytics</span>
+                            <h3>DataPulse AI — Autonomous Product Intelligence & Experimentation Engine</h3>
+                        </div>
+                        <p class="project-summary">
+                            Autonomous analytics platform on 547K+ e-commerce records with a self-healing Text-to-SQL pipeline, dynamic DuckDB schema reflection, sub-50ms execution, and a deterministic SciPy statistical engine.
+                        </p>
+                        
+                        <div class="project-bullets">
+                            <ul>
+                                <li>Architected a self-healing Text-to-SQL pipeline with dynamic DuckDB schema reflection and sub-50ms execution across 547K+ records.</li>
+                                <li>Engineered a deterministic SciPy statistical engine (two-proportion $z$-test, 95% CI, Chi-square SRM detection).</li>
+                                <li>Built automated pytest evaluation benchmark suite (<tt>evals/</tt>) and interactive Streamlit analytics interface.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tag-group">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">LangGraph</span>
+                            <span class="tech-badge">DuckDB</span>
+                            <span class="tech-badge">FastAPI</span>
+                            <span class="tech-badge">SciPy</span>
+                            <span class="tech-badge">Streamlit</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Aastha008/DataPulseAI" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> GitHub Repository
+                            </a>
+                            <a href="https://datapulse-ai.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Live App
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3: PulseCart -->
+                    <div class="card project-card">
+                        <div class="project-header">
+                            <span class="category-tag">Data Engineering & Experimentation</span>
+                            <h3>PulseCart — E-Commerce Funnel Optimization & Retention Infrastructure</h3>
+                        </div>
+                        <p class="project-summary">
+                            Automated dbt transformation pipeline in Google BigQuery modeling multi-stage funnel drop-offs and retention cohorts across 100K+ transaction sessions with rigorous A/B test evaluation.
+                        </p>
+                        
+                        <div class="project-bullets">
+                            <ul>
+                                <li>Built an automated dbt transformation pipeline in BigQuery modeling multi-stage funnel drop-offs and retention cohorts across 100K+ sessions.</li>
+                                <li>Evaluated checkout A/B test via two-proportion $z$-test (95% CI); identified an 8.9% conversion lift ($p < 0.05$).</li>
+                                <li>Deployed an executive Power BI KPI dashboard with automated DAX measures for real-time conversion monitoring.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tag-group">
+                            <span class="tech-badge">Google BigQuery</span>
+                            <span class="tech-badge">dbt</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">A/B Testing</span>
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">DAX</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> GitHub Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 4: CreditLens -->
+                    <div class="card project-card">
+                        <div class="project-header">
+                            <span class="category-tag">Risk Analytics & Power BI</span>
+                            <h3>CreditLens — Consumer Credit Default Modeling & Portfolio Risk Diagnostic</h3>
+                        </div>
+                        <p class="project-summary">
+                            Analyzed 887K+ loan records; uncovered 6.4x default-rate spread across loan grades and built a 4-page Power BI risk dashboard; proved income-to-loan ratio predictive power.
+                        </p>
+                        
+                        <div class="project-bullets">
+                            <ul>
+                                <li>Discovered a 6.4x default-rate spread across loan grades (7.4% in Grade A to 47.2% in Grade G).</li>
+                                <li>Identified structural pricing gaps where high-risk borrowers are under-compensated relative to default rate.</li>
+                                <li>Demonstrated that income-to-loan ratio predicts default risk more strongly than gross income alone.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tag-group">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">DAX</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Aastha008/CreditRiskAnalysis" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 5: DinePulse -->
+                    <div class="card project-card">
+                        <div class="project-header">
+                            <span class="category-tag">In-Memory OLAP & SQL</span>
+                            <h3>DinePulse — Food-Tech Market Intelligence & In-Memory OLAP Platform</h3>
+                        </div>
+                        <p class="project-summary">
+                            Interactive analytics dashboard on 50,000+ listings backed by an in-process DuckDB SQL layer serving both Jupyter and Streamlit, achieving sub-50ms query latency.
+                        </p>
+                        
+                        <div class="project-bullets">
+                            <ul>
+                                <li>Designed a shared DuckDB SQL query layer consumed identically by Jupyter analysis notebooks and Streamlit dashboards.</li>
+                                <li>Eliminated code divergence between data exploration notebooks and live production dashboard views.</li>
+                                <li>Deployed end-to-end on Streamlit Community Cloud with automated Kaggle API data pipelines.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tag-group">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">DuckDB</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">SQL</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Aastha008/zomato-restaurant-analysis" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> GitHub Repository
+                            </a>
+                            <a href="https://zomato-restaurant-analysis.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Live App
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 6: Options Pricing -->
+                    <div class="card project-card">
+                        <div class="project-header">
+                            <span class="category-tag">Quantitative Finance</span>
+                            <h3>Options Pricing & Risk Analytics Dashboard</h3>
+                        </div>
+                        <p class="project-summary">
+                            Full-stack quant finance dashboard with Black-Scholes pricing, analytical Greeks, Monte Carlo (GBM) simulation, GARCH/EWMA vol forecasting, and a portfolio VaR/CVaR risk engine (95%/99%) on live market data.
+                        </p>
+                        
+                        <div class="project-bullets">
+                            <ul>
+                                <li>Implemented closed-form Black-Scholes Call/Put pricing and analytical Greeks ($\Delta, \Gamma, \mathcal{V}, \Theta, \rho$).</li>
+                                <li>Built Monte Carlo engine with Geometric Brownian Motion and Antithetic Variates for variance reduction.</li>
+                                <li>Fitted GARCH/EWMA volatility models and calculated Historical & Monte Carlo Value-at-Risk (95%/99% VaR/CVaR).</li>
+                            </ul>
+                        </div>
+
+                        <div class="tag-group">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">QuantLib</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">SciPy</span>
+                            <span class="tech-badge">Monte Carlo</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Aastha008/Options-Pricing-Dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> GitHub Repository
+                            </a>
+                            <a href="#quant-lab" class="btn btn-outline btn-sm">
+                                <i class="fas fa-play"></i> Test Interactive Lab
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 7: Medical Store Inventory -->
+                    <div class="card project-card">
+                        <div class="project-header">
+                            <span class="category-tag">Full-Stack Software Engineering</span>
+                            <h3>Smart Medical Store Inventory System</h3>
+                        </div>
+                        <p class="project-summary">
+                            Production pharmacy inventory management system built during software engineering internship at Bharuwa Solutions Pvt. Ltd.
+                        </p>
+                        
+                        <div class="project-bullets">
+                            <ul>
+                                <li>Shipped 3 of 4 modules — inventory management, billing, and supplier records — for a pharmacy inventory system.</li>
+                                <li>Built and tested REST APIs in .NET Core with an Angular front-end, implementing full CRUD flows across a normalized MS SQL Server schema spanning 20 tables.</li>
+                                <li>Architected a 20-table normalized schema with 10+ stored procedures enforcing referential integrity, reducing data inconsistency errors to zero during testing.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tag-group">
+                            <span class="tech-badge">.NET Core</span>
+                            <span class="tech-badge">Angular</span>
+                            <span class="tech-badge">MS SQL Server</span>
+                            <span class="tech-badge">C#</span>
+                            <span class="tech-badge">REST APIs</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Aastha008/Inventory_Management_system" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i class="fab fa-github"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Dedicated Quant Finance Lab Section -->
+        <section id="quant-lab" class="section quant-section">
+            <div class="container">
+                <div class="section-title-group">
+                    <h2 class="section-heading">Quantitative Finance Lab</h2>
+                    <p class="section-subheading">Interactive Black-Scholes option pricing solver & 3D Volatility Surface model</p>
+                </div>
+
+                <div class="quant-grid">
+                    <!-- Calculator Panel -->
+                    <div class="card quant-calc-card">
+                        <h3><i class="fas fa-calculator text-accent"></i> Black-Scholes Option Solver</h3>
+                        <p class="quant-note">Adjust parameters to compute European Call & Put prices alongside analytical Greeks in real time.</p>
+                        
+                        <div class="quant-inputs-grid">
+                            <div class="input-field">
+                                <label for="lab-spot">Spot Price ($S_0$)</label>
+                                <input type="number" id="lab-spot" value="100" min="1" step="1">
+                            </div>
+                            <div class="input-field">
+                                <label for="lab-strike">Strike Price ($K$)</label>
+                                <input type="number" id="lab-strike" value="100" min="1" step="1">
+                            </div>
+                            <div class="input-field">
+                                <label for="lab-rate">Risk-Free Rate ($r$ %)</label>
+                                <input type="number" id="lab-rate" value="5" step="0.5">
+                            </div>
+                            <div class="input-field">
+                                <label for="lab-vol">Volatility ($\sigma$ %)</label>
+                                <input type="number" id="lab-vol" value="20" step="1">
+                            </div>
+                            <div class="input-field">
+                                <label for="lab-time">Time to Expiry ($T$ Yrs)</label>
+                                <input type="number" id="lab-time" value="1.0" step="0.1" min="0.01">
+                            </div>
+                        </div>
+
+                        <div class="quant-results-grid">
+                            <div class="q-res-box">
+                                <span>Call Price</span>
+                                <strong id="lab-call-res" class="text-cyan">$10.45</strong>
+                            </div>
+                            <div class="q-res-box">
+                                <span>Put Price</span>
+                                <strong id="lab-put-res" class="text-gold">$5.57</strong>
+                            </div>
+                            <div class="q-res-box">
+                                <span>Delta ($\Delta$)</span>
+                                <strong id="lab-delta-res">0.636</strong>
+                            </div>
+                            <div class="q-res-box">
+                                <span>Gamma ($\Gamma$)</span>
+                                <strong id="lab-gamma-res">0.019</strong>
+                            </div>
+                            <div class="q-res-box">
+                                <span>Vega ($\mathcal{V}$)</span>
+                                <strong id="lab-vega-res">0.375</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3D Volatility Surface Canvas Panel -->
+                    <div class="card quant-3d-card">
+                        <div class="quant-3d-header">
+                            <h3><i class="fas fa-cube text-accent"></i> 3D Volatility Surface Model</h3>
+                            <span class="tag-sm">Three.js WebGL</span>
+                        </div>
+                        <p class="quant-note">Interactive WebGL parametric surface modeling volatility smile ($IV$ vs $K$) across expiration maturities ($T$). Drag to rotate.</p>
+                        
+                        <div class="quant-canvas-wrapper">
+                            <canvas id="lab-vol-canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-title-group">
+                    <h2 class="section-heading">Skills & Technical Ecosystem</h2>
+                    <p class="section-subheading">Technologies and tools I work with daily</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="card skill-card">
+                        <h4><i class="fas fa-brain text-accent"></i> AI, LLMs & Machine Learning</h4>
+                        <div class="skills-flex">
+                            <span class="skill-tag main">LangGraph</span>
+                            <span class="skill-tag main">LangChain</span>
+                            <span class="skill-tag main">Text-to-SQL</span>
+                            <span class="skill-tag main">RAG Architectures</span>
+                            <span class="skill-tag">Agentic Workflows</span>
+                            <span class="skill-tag">Prompt Engineering</span>
+                            <span class="skill-tag">LLM Evals (pytest)</span>
+                            <span class="skill-tag">Scikit-Learn</span>
+                            <span class="skill-tag">TensorFlow Lite</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h4><i class="fas fa-server text-accent"></i> Database & Systems Internals</h4>
+                        <div class="skills-flex">
+                            <span class="skill-tag main">Volcano Query Engine</span>
+                            <span class="skill-tag main">B+ Tree Indexing</span>
+                            <span class="skill-tag main">Slotted-Page Storage</span>
+                            <span class="skill-tag main">LRU Buffer Pool</span>
+                            <span class="skill-tag">WAL Logging</span>
+                            <span class="skill-tag">ARIES Crash Recovery</span>
+                            <span class="skill-tag">Strict 2PL Concurrency</span>
+                            <span class="skill-tag">Hash Indexes</span>
+                            <span class="skill-tag">SQL Lexer/Parser</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h4><i class="fas fa-database text-accent"></i> Data Engineering & Cloud</h4>
+                        <div class="skills-flex">
+                            <span class="skill-tag main">dbt</span>
+                            <span class="skill-tag main">Google BigQuery</span>
+                            <span class="skill-tag main">DuckDB (In-Memory OLAP)</span>
+                            <span class="skill-tag main">Star Schema Modeling</span>
+                            <span class="skill-tag">ETL/ELT Pipelines</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MS SQL Server</span>
+                            <span class="skill-tag">Database Normalization</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h4><i class="fas fa-code text-accent"></i> Programming Languages</h4>
+                        <div class="skills-flex">
+                            <span class="skill-tag main">Python</span>
+                            <span class="skill-tag main">SQL</span>
+                            <span class="skill-tag main">Java (JDK 21)</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">DAX</span>
+                            <span class="skill-tag">C</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h4><i class="fas fa-chart-line text-accent"></i> Analytics & Experimentation</h4>
+                        <div class="skills-flex">
+                            <span class="skill-tag main">A/B Testing (Two-Proportion $z$-test)</span>
+                            <span class="skill-tag main">Sample Ratio Mismatch ($\chi^2$)</span>
+                            <span class="skill-tag main">Power BI (DAX)</span>
+                            <span class="skill-tag">Funnel Drop-off & Cohorts</span>
+                            <span class="skill-tag">Statistical Modeling (SciPy)</span>
+                            <span class="skill-tag">Root-Cause Analysis</span>
+                            <span class="skill-tag">KPI Metric Tracking</span>
+                            <span class="skill-tag">Monte Carlo Simulation</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h4><i class="fas fa-tools text-accent"></i> Frameworks & Developer Tools</h4>
+                        <div class="skills-flex">
+                            <span class="skill-tag main">FastAPI (REST APIs)</span>
+                            <span class="skill-tag main">Streamlit</span>
+                            <span class="skill-tag main">Docker</span>
+                            <span class="skill-tag main">Git & GitHub</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">Jupyter</span>
+                            <span class="skill-tag">.NET Core</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience, Certifications & Research -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-title-group">
+                    <h2 class="section-heading">Experience & Achievements</h2>
+                    <p class="section-subheading">Industry internships, professional certifications, and academic research</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Internship 1: Omoiyari Greentech -->
+                    <div class="timeline-row">
+                        <div class="timeline-badge"><i class="fas fa-chart-line"></i></div>
+                        <div class="card timeline-card">
+                            <div class="timeline-head">
+                                <div>
+                                    <span class="badge badge-cyan">Data Analytics Internship</span>
+                                    <h3>Data Analytics Intern</h3>
+                                    <h4>Omoiyari Greentech Pvt. Ltd.</h4>
+                                </div>
+                                <span class="time-period"><i class="fas fa-calendar-alt"></i> May 2026 – Jul 2026</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Designed and developed a Business Intelligence dashboard to analyze sales performance using data analytics techniques; completed the engagement with a <strong>9.7/10</strong> performance score.</li>
+                                <li>Cleaned, transformed, and validated 50,000+ rows of raw sales data using <strong>Python (Pandas)</strong> and <strong>SQL</strong>, resolving data quality issues before pipeline ingestion.</li>
+                                <li>Delivered 8+ interactive KPI dashboards covering revenue trends, regional breakdowns, and month-over-month growth; the reporting framework was adopted by the sales team, reducing manual reporting effort by an estimated 3 hours per week.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Internship 2: Bharuwa Solutions -->
+                    <div class="timeline-row">
+                        <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
+                        <div class="card timeline-card">
+                            <div class="timeline-head">
+                                <div>
+                                    <span class="badge badge-primary">Software Internship</span>
+                                    <h3>Software Development Intern</h3>
+                                    <h4>Bharuwa Solutions Pvt. Ltd.</h4>
+                                </div>
+                                <span class="time-period"><i class="fas fa-calendar-alt"></i> May 2025 – Jun 2025</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Shipped 3 of 4 modules — inventory management, billing, and supplier records — for a pharmacy inventory system, translating undocumented business requirements into working features.</li>
+                                <li>Built and tested <strong>REST APIs</strong> in <strong>.NET Core</strong> with an <strong>Angular</strong> front-end, implementing full CRUD flows across a normalized <strong>MS SQL Server</strong> schema spanning 20 tables.</li>
+                                <li>Architected a 20-table normalized schema with 10+ stored procedures enforcing referential integrity across inventory, supplier, and transaction records, reducing data inconsistency errors to zero during testing.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="timeline-row">
+                        <div class="timeline-badge"><i class="fas fa-certificate"></i></div>
+                        <div class="card timeline-card">
+                            <div class="timeline-head">
+                                <div>
+                                    <span class="badge badge-gold">Certifications</span>
+                                    <h3>Professional Certifications</h3>
+                                </div>
+                            </div>
+                            <div class="cert-grid-simple">
+                                <div class="cert-item">
+                                    <i class="fas fa-award cert-icon"></i>
+                                    <div>
+                                        <strong>IBM Data Analytics with Excel and R Professional Certificate</strong>
+                                        <p>Issued: Jul 2026</p>
+                                    </div>
+                                </div>
+                                <div class="cert-item">
+                                    <i class="fas fa-award cert-icon"></i>
+                                    <div>
+                                        <strong>Deloitte Data Analytics Job Simulation</strong>
+                                        <p>Forage, 2026</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research -->
+                    <div class="timeline-row">
+                        <div class="timeline-badge"><i class="fas fa-flask"></i></div>
+                        <div class="card timeline-card">
+                            <div class="timeline-head">
+                                <div>
+                                    <span class="badge badge-cyan">Research</span>
+                                    <h3>Research Projects & Publications</h3>
+                                </div>
+                            </div>
+                            <ul class="timeline-list">
+                                <li><strong>Fog-Based Flood Prediction & Early Warning System:</strong> VIT Vellore (ESP32 + TFLite, offline alerting).</li>
+                                <li><strong>Comet Orbit Modelling using Bayesian & Monte Carlo Methods:</strong> VIT Vellore, Apr 2025 (15–20% accuracy gain).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title-group">
+                    <h2 class="section-heading">Get in Touch</h2>
+                    <p class="section-subheading">I'd love to connect! Whether you have an opportunity, a project idea, or just want to say hi.</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="card contact-info-card">
+                        <h3>Contact Info</h3>
+                        <p>Feel free to reach out via email, phone, or connect on GitHub and LinkedIn.</p>
+
+                        <div class="contact-links-list">
+                            <a href="mailto:aasthagupta1048@gmail.com" class="c-link-item">
+                                <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <span>Email</span>
+                                    <strong>aasthagupta1048@gmail.com</strong>
+                                </div>
+                            </a>
+                            <a href="tel:+918218013946" class="c-link-item">
+                                <div class="c-icon"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <span>Phone</span>
+                                    <strong>+91-8218013946</strong>
+                                </div>
+                            </a>
+                            <a href="https://github.com/Aastha008" target="_blank" rel="noopener noreferrer" class="c-link-item">
+                                <div class="c-icon"><i class="fab fa-github"></i></div>
+                                <div>
+                                    <span>GitHub</span>
+                                    <strong>github.com/Aastha008</strong>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/aastha-gupta-a8b310344/" target="_blank" rel="noopener noreferrer" class="c-link-item">
+                                <div class="c-icon"><i class="fab fa-linkedin"></i></div>
+                                <div>
+                                    <span>LinkedIn</span>
+                                    <strong>linkedin.com/in/aastha-gupta-a8b310344</strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card contact-form-card">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required placeholder="you@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" required placeholder="Hi Aastha, I came across your portfolio..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-flex">
+            <span>Designed & Built by Aastha Gupta</span>
+            <span>Built with HTML, CSS & Three.js WebGL</span>
+            <div class="footer-links">
+                <a href="https://github.com/Aastha008" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aastha-gupta-a8b310344/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:aasthagupta1048@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Resume Viewer Modal -->
+    <div class="modal-overlay hidden" id="resume-modal">
+        <div class="modal-container card modal-lg">
+            <div class="modal-header">
+                <h3><i class="fas fa-file-pdf"></i> Aastha Gupta - Official Resume</h3>
+                <div class="modal-header-actions">
+                    <button class="btn btn-xs btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Print / Save PDF</button>
+                    <button class="modal-close" id="close-resume-modal">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body resume-preview-body">
+                <div class="resume-sheet">
+                    <header class="res-head">
+                        <h1>Aastha Gupta</h1>
+                        <p class="res-contacts">
+                            +91-8218013946 | <a href="mailto:aasthagupta1048@gmail.com">aasthagupta1048@gmail.com</a> | 
+                            <a href="https://github.com/Aastha008" target="_blank">GitHub</a> | 
+                            <a href="https://www.linkedin.com/in/aastha-gupta-a8b310344/" target="_blank">LinkedIn</a> | 
+                            <a href="https://aastha-portfolio-ruddy.vercel.app" target="_blank">Portfolio</a>
+                        </p>
+                    </header>
+
+                    <section class="res-sec">
+                        <h2>Summary</h2>
+                        <p>Data-focused CS undergraduate skilled in turning raw datasets into actionable insight through SQL, statistical analysis, and interactive dashboards. Built and deployed analytics dashboards on 50,000+ records using SQL, Pandas, and <strong>Streamlit</strong>; backed by hands-on experience shipping REST APIs across full-stack and embedded systems.</p>
+                    </section>
+
+                    <section class="res-sec">
+                        <h2>Education</h2>
+                        <div class="res-item-head">
+                            <strong>Vellore Institute of Technology</strong>
+                            <span>2023 – Present</span>
+                        </div>
+                        <p>B.Tech, Computer Science & Engineering (IoT) | <strong>CGPA: 8.5</strong></p>
+                        <p><strong>CBSE Class XII</strong>: 92.92% | <strong>CBSE Class X</strong>: 91%</p>
+                    </section>
+
+                    <section class="res-sec">
+                        <h2>Experience</h2>
+                        
+                        <div class="res-item-head">
+                            <strong>Data Analytics Intern</strong>
+                            <span>May 2026 – Jul 2026</span>
+                        </div>
+                        <p class="res-sub"><em>Omoiyari Greentech Pvt. Ltd.</em></p>
+                        <ul>
+                            <li>Designed and developed a Business Intelligence dashboard to analyze sales performance using data analytics techniques; completed the engagement with a <strong>9.7/10</strong> performance score.</li>
+                            <li>Cleaned, transformed, and validated 50,000+ rows of raw sales data using <strong>Python (Pandas)</strong> and <strong>SQL</strong>, resolving data quality issues before pipeline ingestion.</li>
+                            <li>Delivered 8+ interactive KPI dashboards covering revenue trends, regional breakdowns, and month-over-month growth; the reporting framework was adopted by the sales team, reducing manual reporting effort by an estimated 3 hours per week.</li>
+                        </ul>
+
+                        <div class="res-item-head" style="margin-top: 0.8rem;">
+                            <strong>Software Development Intern</strong>
+                            <span>May 2025 – Jun 2025</span>
+                        </div>
+                        <p class="res-sub"><em>Bharuwa Solutions Pvt. Ltd.</em></p>
+                        <ul>
+                            <li>Shipped 3 of 4 modules — inventory management, billing, and supplier records — for a pharmacy inventory system, translating undocumented business requirements into working features.</li>
+                            <li>Built and tested <strong>REST APIs</strong> in <strong>.NET Core</strong> with an <strong>Angular</strong> front-end, implementing full CRUD flows across a normalized <strong>MS SQL Server</strong> schema spanning 20 tables.</li>
+                            <li>Architected a 20-table normalized schema with 10+ stored procedures enforcing referential integrity across inventory, supplier, and transaction records, reducing data inconsistency errors to zero during testing.</li>
+                        </ul>
+                    </section>
+
+                    <section class="res-sec">
+                        <h2>Technical Projects</h2>
+
+                        <div class="res-proj">
+                            <strong>Options Pricing & Risk Analytics Dashboard</strong> · <em>Python, QuantLib, Streamlit, SciPy</em>
+                            <span style="float: right;"><a href="https://aastha-portfolio-ruddy.vercel.app/#quant-lab" target="_blank">Live</a> | <a href="https://github.com/Aastha008/Options-Pricing-Dashboard" target="_blank">GitHub</a></span>
+                            <ul>
+                                <li>Full-stack quant finance dashboard with Black-Scholes pricing, analytical Greeks, Monte Carlo (GBM) simulation, GARCH/EWMA vol forecasting, and a portfolio VaR/CVaR risk engine (95%/99%) on live market data.</li>
+                            </ul>
+                        </div>
+
+                        <div class="res-proj">
+                            <strong>Credit Risk Analysis</strong> · <em>Python, Pandas, SQL, Power BI</em>
+                            <span style="float: right;"><a href="https://github.com/Aastha008/CreditRiskAnalysis" target="_blank">GitHub</a></span>
+                            <ul>
+                                <li>Analyzed 887K+ loan records; uncovered 6.4x default-rate spread across loan grades and built a 4-page Power BI risk dashboard; found income-to-loan ratio outperforms income alone in predicting default.</li>
+                            </ul>
+                        </div>
+
+                        <div class="res-proj">
+                            <strong>Zomato Restaurant Analysis Dashboard</strong> · <em>Python, DuckDB, Pandas, Streamlit</em>
+                            <span style="float: right;"><a href="https://zomato-restaurant-dashboard.streamlit.app/" target="_blank">Live</a> | <a href="https://github.com/Aastha008/zomato-restaurant-analysis" target="_blank">GitHub</a></span>
+                            <ul>
+                                <li>Interactive dashboard on 50,000+ listings with a shared DuckDB query layer serving both Jupyter and Streamlit; deployed with an automated Kaggle-API pipeline on Streamlit Community Cloud.</li>
+                            </ul>
+                        </div>
+
+                        <div class="res-proj">
+                            <strong>Fog-Based Flood Prediction & Early Warning System</strong> · <em>ESP32, TensorFlow Lite, Blynk IoT</em>
+                            <ul>
+                                <li>TensorFlow Lite model deployed on ESP32 achieving 96.7% flood-risk classification accuracy with offline alerting; inference runs at the edge to minimize alert latency.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="res-sec">
+                        <h2>Technical Skills</h2>
+                        <p><strong>Languages:</strong> Python, C, C++, C#, Java, SQL, Assembly (8051)</p>
+                        <p><strong>Frameworks & Libraries:</strong> .NET Core, Angular, TensorFlow Lite, HTML5, CSS3, NumPy, Pandas, SciPy, Matplotlib, QuantLib, Streamlit</p>
+                        <p><strong>Data Analytics:</strong> SQL, Jupyter, Excel, Power BI, Statistical Modelling, Data Visualization, KPI Tracking, Quantitative Finance, Monte Carlo Simulation, VaR/CVaR</p>
+                        <p><strong>IoT & Hardware:</strong> ESP32, Arduino, 8051 MCU, IR Sensors, PWM, Blynk IoT, Fog/Edge Computing</p>
+                        <p><strong>Tools & Platforms:</strong> MySQL, MS SQL Server, Git, GitHub, DuckDB, Streamlit, Jupyter, Power BI, Visual Studio, VS Code, Figma</p>
+                        <p><strong>CS Fundamentals:</strong> Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, OOP, REST APIs</p>
+                    </section>
+
+                    <section class="res-sec">
+                        <h2>Research</h2>
+                        <ul>
+                            <li><strong>Fog-Based Flood Prediction & Early Warning System</strong> — VIT Vellore (ESP32 + TFLite, offline alerting)</li>
+                            <li><strong>Comet Orbit Modelling using Bayesian & Monte Carlo Methods</strong> — VIT Vellore, Apr 2025 (15–20% accuracy gain)</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript App Logic -->
+    <script src="js/three-scene.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
