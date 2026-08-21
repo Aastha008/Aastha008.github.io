@@ -6,7 +6,7 @@
 
 > Modern, interactive 3D WebGL developer portfolio showcasing work in **AI Systems & LLM Agents**, **Database Storage Internals**, **Data Engineering**, and **Quantitative Risk Analytics**.
 
-🔗 **Live Deployment:** [https://aastha-portfolio-ruddy.vercel.app/](https://aastha-portfolio-ruddy.vercel.app/)
+🔗 **Live Deployment:** [https://aastha008.github.io/](https://aastha008.github.io/)
 
 ---
 
