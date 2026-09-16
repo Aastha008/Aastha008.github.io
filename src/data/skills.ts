@@ -1,0 +1,170 @@
+export interface EvidenceSkill {
+  name: string;
+  category: 'DATA' | 'SYSTEMS' | 'AI / ML' | 'WEB' | 'ANALYTICS';
+  size: 'large' | 'medium' | 'regular';
+  evidence: string;
+  pastelBg: string;
+  accent: string;
+}
+
+export const EVIDENCE_SKILLS: EvidenceSkill[] = [
+  {
+    name: 'Python',
+    category: 'DATA',
+    size: 'large',
+    evidence: 'DataPulse AI, Synapse, Options Analytics & data-cleaning pipelines.',
+    pastelBg: '#FAF0D7',
+    accent: '#B8860B',
+  },
+  {
+    name: 'Java 21',
+    category: 'SYSTEMS',
+    size: 'large',
+    evidence: 'ForgeDB: Built B+ Tree, Buffer Pool, WAL & ARIES crash recovery from scratch.',
+    pastelBg: '#EFE7FB',
+    accent: '#7C3AED',
+  },
+  {
+    name: 'DuckDB',
+    category: 'DATA',
+    size: 'large',
+    evidence: 'DataPulse AI: In-process sub-50ms columnar SQL query execution over 547K records.',
+    pastelBg: '#E2F6EB',
+    accent: '#059669',
+  },
+  {
+    name: 'SQL',
+    category: 'DATA',
+    size: 'large',
+    evidence: 'Complex window queries, dbt models, and schema migrations across PostgreSQL & BigQuery.',
+    pastelBg: '#E0F1FA',
+    accent: '#0284C7',
+  },
+  {
+    name: 'LangGraph',
+    category: 'AI / ML',
+    size: 'medium',
+    evidence: 'DataPulse AI: Self-healing state machines for automated Text-to-SQL generation.',
+    pastelBg: '#FCE7F3',
+    accent: '#DB2777',
+  },
+  {
+    name: 'FastAPI',
+    category: 'WEB',
+    size: 'medium',
+    evidence: 'Synapse & DataPulse AI: High-performance asynchronous REST & WebSocket backends.',
+    pastelBg: '#E2F6EB',
+    accent: '#0D9488',
+  },
+  {
+    name: 'BigQuery & dbt',
+    category: 'DATA',
+    size: 'medium',
+    evidence: 'PulseCart: 4-layer analytics warehouse modeling 100K+ customer browsing sessions.',
+    pastelBg: '#FAF0D7',
+    accent: '#D97706',
+  },
+  {
+    name: 'Power BI & DAX',
+    category: 'ANALYTICS',
+    size: 'medium',
+    evidence: 'PulseCart: 4-page executive dashboard with 74 production DAX measures.',
+    pastelBg: '#FFF3CD',
+    accent: '#B45309',
+  },
+  {
+    name: 'TensorFlow Lite',
+    category: 'AI / ML',
+    size: 'medium',
+    evidence: 'Predictive neural inference with optimized quantization and model compression.',
+    pastelBg: '#FFE4E6',
+    accent: '#E11D48',
+  },
+  {
+    name: 'Scikit-Learn & ML',
+    category: 'AI / ML',
+    size: 'medium',
+    evidence: 'Supervised classification, Isolation Forest anomaly isolation, and cross-validation pipelines.',
+    pastelBg: '#E0F1FA',
+    accent: '#2563EB',
+  },
+  {
+    name: 'React 18 & TypeScript',
+    category: 'WEB',
+    size: 'large',
+    evidence: 'Synapse observability frontend & interactive portfolio experience.',
+    pastelBg: '#E0F1FA',
+    accent: '#0284C7',
+  },
+  {
+    name: 'SciPy & NumPy',
+    category: 'AI / ML',
+    size: 'regular',
+    evidence: 'Deterministic two-proportion z-tests, Chi-square SRM checks, and options Greeks.',
+    pastelBg: '#EFE7FB',
+    accent: '#6D28D9',
+  },
+  {
+    name: 'MongoDB',
+    category: 'SYSTEMS',
+    size: 'regular',
+    evidence: 'Synapse: High-throughput unstructured microservices telemetry raw event archive.',
+    pastelBg: '#E2F6EB',
+    accent: '#059669',
+  },
+  {
+    name: 'Streamlit',
+    category: 'ANALYTICS',
+    size: 'regular',
+    evidence: 'DataPulse AI & Options Pricing Lab: Interactive data exploration dashboards.',
+    pastelBg: '#FFE4E6',
+    accent: '#DC2626',
+  },
+  {
+    name: 'Tailwind CSS',
+    category: 'WEB',
+    size: 'regular',
+    evidence: 'Design system craftsmanship, editorial responsive typography, and layout engineering.',
+    pastelBg: '#E0F1FA',
+    accent: '#0891B2',
+  },
+];
+
+export const HORIZONTAL_DOMAINS = [
+  {
+    id: 'analyze',
+    title: 'ANALYZE',
+    subtitle: 'Extracting clean signal from raw noise',
+    description: 'High-throughput exploratory data analysis, columnar OLAP aggregation, and metric diagnostics.',
+    technologies: ['Python', 'SQL', 'DuckDB', 'BigQuery', 'Power BI'],
+    highlight: '100K+ Sessions Analyzed',
+    pastelBg: '#FAF0D7',
+  },
+  {
+    id: 'model',
+    title: 'MODEL',
+    subtitle: 'Structuring probabilistic and operational reality',
+    description: 'Supervised predictive learning, autonomous Text-to-SQL agents, and statistical hypothesis tests.',
+    technologies: ['LangGraph', 'SciPy', 'Scikit-Learn', 'Isolation Forest'],
+    highlight: 'Deterministic SciPy Testing',
+    pastelBg: '#E2F6EB',
+  },
+  {
+    id: 'build',
+    title: 'BUILD',
+    subtitle: 'Crafting responsive, deterministic software',
+    description: 'Relational database storage engines from scratch in Java 21, low-latency APIs, and reactive interfaces.',
+    technologies: ['Java 21', 'B+ Tree', 'FastAPI', 'React', 'TypeScript'],
+    highlight: 'ACID Storage Internals',
+    pastelBg: '#EFE7FB',
+  },
+  {
+    id: 'decide',
+    title: 'DECIDE',
+    subtitle: 'Translating model outputs into executive truth',
+    description: 'Randomized A/B experimentation, Sample Ratio Mismatch validation, causal inference, and decision telemetry.',
+    technologies: ['SciPy', 'BigQuery', 'dbt Core', 'Power BI', 'DAX'],
+    highlight: 'Randomized A/B Rigor',
+    pastelBg: '#E0F1FA',
+  },
+];

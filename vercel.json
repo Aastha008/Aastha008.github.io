@@ -1,4 +1,7 @@
 {
   "name": "aastha-portfolio",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "cleanUrls": true
 }
